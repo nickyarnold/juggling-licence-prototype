@@ -14,11 +14,24 @@ router.post('/juggling-balls-answer', function (req, res) {
   //check whether the variable matches a condition
   if (jugglingBalls == "3 or more") {
     // send user to next page
-    res.redirect('/juggling-trick')
+    res.redirect('/juggling-age')
   } else {
     // send user to ineligible page
     res.redirect('/ineligible')
   }
 })
 
+router.post('/juggling-age-answer', function (req, res) {
+  //make a variable and give it the value from 'juggling-age'
+  var jugglingAge = req.session.data['juggling-age']
+
+  //check whether the variable matches a condition
+  if (jugglingAge == "18 or over") {
+    // send user to next page
+    res.redirect('/juggling-trick')
+  } else {
+    // send user to ineligible page
+    res.redirect('/under-eighteen')
+  }
+})
 module.exports = router

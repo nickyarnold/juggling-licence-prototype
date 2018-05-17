@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="juggling-balls">Back</a>
+
+      <form class="form" action="juggling-age-answer" method="post">
+
+        <div class="form-group">
+  <fieldset class="inline">
+
+    <legend>
+      <h1 class="heading-medium">
+        How old are you?
+      </h1>
+    </legend>
+
+    <div class="multiple-choice">
+      <input id="radio-inline-1" type="radio" name="juggling-age" value="18 or over" {{ checked("juggling-age", "18 or over")}}>
+      <label for="radio-inline-1">18 or over</label>
+    </div>
+    <div class="multiple-choice">
+      <input id="radio-inline-2" type="radio" name="juggling-age" value="Below 18" {{ checked("juggling-age", "Below 18")}}>
+      <label for="radio-inline-2">Below 18</label>
+    </div>
+
+  </fieldset>
+</div>
+
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

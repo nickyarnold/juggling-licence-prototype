@@ -9,7 +9,7 @@
 <main id="content" role="main">
   <div class="grid-row">
     <div class="column-two-thirds">
-      <a href="juggling-trick" class="link-back">Back</a>
+      <a href="juggling-evidence" class="link-back">Back</a>
 
       <h1 class="heading-large">
         Check your answers before sending your application
@@ -40,6 +40,20 @@
 
         <div>
           <dt class="cya-question">
+            Your age
+          </dt>
+          <dd class="cya-answer">
+            {{ data['juggling-age'] }}
+          </dd>
+          <dd class="cya-change">
+            <a href="juggling-age">
+              Change<span class="visually-hidden"> your age</span>
+            </a>
+          </dd>
+        </div>
+
+        <div>
+          <dt class="cya-question">
             Your most impressive juggling trick
           </dt>
           <dd class="cya-answer">
@@ -48,6 +62,20 @@
           <dd class="cya-change">
             <a href="juggling-trick">
               Change<span class="visually-hidden"> juggling trick</span>
+            </a>
+          </dd>
+        </div>
+
+        <div>
+          <dt class="cya-question">
+            Proof you can juggle
+          </dt>
+          <dd class="cya-answer">
+            {{ data['juggling-evidence'] }}
+          </dd>
+          <dd class="cya-change">
+            <a href="juggling-evidence">
+              Change<span class="visually-hidden"> juggling evidence</span>
             </a>
           </dd>
         </div>
